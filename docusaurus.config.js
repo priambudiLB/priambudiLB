@@ -79,7 +79,7 @@ module.exports = {
           items: [
             {
               label: 'Blog',
-              to: '/blog',
+              to: '/read',
             },
             {
               label: 'GitHub',
@@ -95,7 +95,7 @@ module.exports = {
       darkTheme: darkCodeTheme,
     },
     gtag: {
-      trackingID: process.env.ANALYTICS_MEASUREMENT_ID,
+      trackingID: "G-EWZ5G4808S",
     },
   },
   plugins: [
