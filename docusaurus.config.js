@@ -3,9 +3,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'My Site',
+  title: 'priambudi.fyi',
   tagline: 'Dinosaurs are cool',
-  url: 'https://priambudilb.github.io',
+  url: 'https://priambudi.fyi',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -13,11 +13,21 @@ module.exports = {
   organizationName: 'priambudiLB', // Usually your GitHub org/user name.
   projectName: 'fyi', // Usually your repo name.
   themeConfig: {
+    defaultMode: 'dark',
+    image: 'img/logo.svg',
+    // announcementBar: {
+    //   id: 'support_us', // Any value that will identify this message.
+    //   content:
+    //     'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
+    //   backgroundColor: '#fafbfc', // Defaults to `#fff`.
+    //   textColor: '#091E42', // Defaults to `#000`.
+    // },
     navbar: {
       title: '.fyi()',
       logo: {
         alt: 'priambudi.fyi',
         src: 'img/logo.svg',
+        srcDark: 'img/logo.light.svg',
       },
       items: [
         {
@@ -26,12 +36,13 @@ module.exports = {
           position: 'left',
           label: '.create()',
         },
-        {to: '/blog', label: '.read()', position: 'left'},
-        // {
-        //   href: 'https://github.com/facebook/docusaurus',
-        //   label: 'GitHub',
-        //   position: 'right',
-        // },
+        {to: '/read', label: '.read()', position: 'left'},
+        {
+          href: 'https://github.com/priambudiLB',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
+        },
       ],
     },
     footer: {
@@ -84,6 +95,7 @@ module.exports = {
       darkTheme: darkCodeTheme,
     },
   },
+  plugins: ['@docusaurus/plugin-ideal-image'],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -92,13 +104,23 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/priambudiLB/fyi/tree/main/docs',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+          blogTitle: 'Read | priambudi.fyi',
+          blogDescription: 'Blog Bagas',
+          editUrl: ({locale, blogDirPath, blogPath, permalink}) => {
+            return `https://github.com/priambudiLB/fyi/tree/main/${blogDirPath}/${blogPath}`;
+          },
+          routeBasePath: 'read',
+          feedOptions: {
+            type: 'all', // required. 'rss' | 'feed' | 'all'
+            title: '', // default to siteConfig.title
+            description: '', // default to  `${siteConfig.title} Blog`
+            copyright: `Copyright © ${new Date().getFullYear()} Priambudi Lintang Bagaskara.`,
+            language: 'en', // possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

@@ -1,0 +1,32 @@
+{
+    "retributions": [
+        {
+            "now": {
+                "id": 3,
+                "tarif": 10000,
+                "status": 0,
+                "name": "ehehehe 3"
+            },
+            "all": [
+                {
+                    "id": 1,
+                    "tarif": 10000,
+                    "status": 0,
+                    "name": "ehehehe 1"
+                },
+                {
+                    "id": 2,
+                    "tarif": 10000,
+                    "status": 0,
+                    "name": "ehehehe 2"
+                },
+                {
+                    "id": 3,
+                    "tarif": 10000,
+                    "status": 0,
+                    "name": "ehehehe 3"
+                }
+            ]
+        }
+    ]
+}
