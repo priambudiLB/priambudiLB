@@ -94,8 +94,22 @@ module.exports = {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
     },
+    gtag: {
+      trackingID: process.env.ANALYTICS_MEASUREMENT_ID,
+    },
   },
-  plugins: ['@docusaurus/plugin-ideal-image'],
+  plugins: [
+    '@docusaurus/plugin-ideal-image',
+    ['docusaurus2-dotenv',
+    {
+      path: "./.env", // The path to your environment variables.
+      safe: false, // If false ignore safe-mode, if true load './.env.example', if a string load that file as the sample
+      systemvars: false, // Set to true if you would rather load all system variables as well (useful for CI purposes)
+      silent: false, //  If true, all warnings will be suppressed
+      expand: false, // Allows your variables to be "expanded" for reusability within your .env file
+      defaults: false, //  Adds support for dotenv-defaults. If set to true, uses ./.env.defaults
+  }]
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -124,6 +138,11 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          trailingSlash: false,
         },
       },
     ],
