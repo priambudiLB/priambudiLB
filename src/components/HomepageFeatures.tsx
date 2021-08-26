@@ -19,7 +19,11 @@ const FeatureList = [
     description: (
       <>
         Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        ahead and move your docs into the
+        {' '}
+        <code>docs</code>
+        {' '}
+        directory.
       </>
     ),
   },
@@ -35,7 +39,7 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
