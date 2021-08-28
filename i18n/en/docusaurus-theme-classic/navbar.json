@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": ".fyi()",
+    "description": "The title in the navbar"
+  },
+  "item.label..create()": {
+    "message": ".create()",
+    "description": "Navbar item with label .create()"
+  },
+  "item.label..read()": {
+    "message": ".read()",
+    "description": "Navbar item with label .read()"
+  },
+  "item.label..showcase()": {
+    "message": ".showcase()",
+    "description": "Navbar item with label .showcase()"
+  }
+}

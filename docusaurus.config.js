@@ -4,7 +4,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'priambudi.fyi',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Dinosaurs are cool. But I\'m even cooler 😎.',
   url: 'https://priambudi.fyi',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -12,6 +12,10 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'priambudiLB', // Usually your GitHub org/user name.
   projectName: 'fyi', // Usually your repo name.
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'id'],
+  },
   themeConfig: {
     defaultMode: 'dark',
     image: 'img/logo.svg',
@@ -51,6 +55,10 @@ module.exports = {
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right',
         },
       ],
     },

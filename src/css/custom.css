@@ -11,7 +11,7 @@
 :root {
   --site-primary-hue-saturation: 167,68%;
   --site-primary-hue-saturation-light: 167,56%;
-  --ifm-color-primary: rgb(34, 186, 153);
+  --ifm-color-primary: rgb(32, 177, 146);
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
@@ -19,6 +19,18 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+}
+
+html[data-theme="dark"] ::selection {
+  background-color: var(--ifm-color-primary-darkest);
+}
+
+html[data-theme="light"] ::selection {
+  background-color: var(--ifm-color-primary-lightest);
+}
+
+::selection {
+  color: var(--ifm-color-primary-contrast-foreground);
 }
 
 .docusaurus-highlight-code-line {
@@ -53,4 +65,8 @@ div[class^=announcementBar_] {
   --site-announcement-bar-stripe-color2: hsl(var(--site-primary-hue-saturation), 95%);
   background: repeating-linear-gradient( 35deg, var(--site-announcement-bar-stripe-color1), var(--site-announcement-bar-stripe-color1) 20px, var(--site-announcement-bar-stripe-color2) 10px, var(--site-announcement-bar-stripe-color2) 40px);
   font-weight: 700;
+}
+
+#nprogress > div {
+  background: var(--ifm-color-primary) !important;
 }
