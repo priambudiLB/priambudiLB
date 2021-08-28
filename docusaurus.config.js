@@ -127,6 +127,7 @@ module.exports = {
           // Please change this to your repo.
           editUrl:
             'https://github.com/priambudiLB/fyi/tree/main',
+          editLocalizedFiles: true
         },
         blog: {
           showReadingTime: true,
@@ -143,6 +144,7 @@ module.exports = {
             copyright: `Copyright © ${new Date().getFullYear()} Priambudi Lintang Bagaskara.`,
             language: 'en', // possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
           },
+          editLocalizedFiles: true
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
