@@ -20,10 +20,8 @@ import {SortedUsers, Tags, TagList, User, TagType} from '../../data/users';
 
 type Operator = 'OR' | 'AND';
 
-const TITLE = 'Docusaurus Site Showcase';
-const DESCRIPTION = 'List of websites people are building with Docusaurus';
-const EDIT_URL =
-  'https://github.com/facebook/docusaurus/edit/main/website/src/data/users.tsx';
+const TITLE = 'My Project Showcase';
+const DESCRIPTION = 'List of applications bagas has built.';
 
 function filterUsers(
   users: User[],
@@ -104,14 +102,6 @@ function ShowcaseHeader() {
     <div className="text--center">
       <h1>{TITLE}</h1>
       <p>{DESCRIPTION}</p>
-      <p>
-        <a
-          className={'button button--primary'}
-          href={EDIT_URL}
-          target={'_blank'} rel="noreferrer">
-          🙏 Add your site now!
-        </a>
-      </p>
     </div>
   );
 }

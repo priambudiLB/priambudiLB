@@ -55,7 +55,7 @@ const ShowcaseCard = memo(function ({user}: {user: User}) {
     <div key={user.title} className="col col--4 margin-bottom--lg">
       <div className={clsx('card', styles.showcaseCard)}>
         <div className={clsx('card__image', styles.showcaseCardImage)}>
-          <Image img={user.preview} alt={user.title} />
+          <Image img={user.preview} alt={user.title} quality={60} />
         </div>
         <div className="card__body">
           <div className="avatar">
