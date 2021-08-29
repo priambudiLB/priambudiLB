@@ -1,0 +1,80 @@
+---
+sidebar_position: 1
+---
+# Haskell Installation
+
+export const MyOS = ({children, color}) => {
+  let Name = "Not known";
+  if (navigator.appVersion.indexOf("Win") != -1) Name = 
+    "Windows";
+  if (navigator.appVersion.indexOf("Mac") != -1) Name = 
+    "OS X";
+  if (navigator.appVersion.indexOf("X11") != -1) Name = 
+    "UNIX";
+  if (navigator.appVersion.indexOf("Linux") != -1) Name = 
+    "Linux";
+  return <span>You appear to be running <strong style={{color: 'var(--ifm-link-color)'}}>{Name}</strong>.</span>
+};
+
+Its not as easy as installing **[node](https://nodejs.dev/)**, but the docs made it clear and straightforward.
+There are 2 different ways to setup Haskell on your computer, using **[GHC](https://www.haskell.org/ghc/)** or **[Stack](https://docs.haskellstack.org/)**. In this tutorial, we will use **GHC (Glasgow Haskell Compiler)**.
+
+There are 2 different ways to setup ghc on your computer. Depends on your Operating System; Widows or Linux/OS X/FreeBSD. <MyOS/>
+
+## Linux, OS X and FreeBSD
+1. Install GHC, cabal-install and haskell-language-server via [GHCup](https://www.haskell.org/ghcup/).
+
+### GHCup
+
+[Repository](https://gitlab.haskell.org/haskell/ghcup-hs#manual-install)
+
+**ghcup** is an installer for the general purpose language **Haskell**.
+Get started by **installing ghcup**.
+
+### Installing ghcup
+
+```shell
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+```
+
+Make sure GHCup, GHC, Cabal is installed by running 
+```
+ghcup --version
+ghc --version
+cabal --version
+```
+
+It should print
+```
+The GHCup Haskell installer, version v0.1.16.2
+
+The Glorious Glasgow Haskell Compilation System, version 8.10.7
+
+cabal-install version 3.4.0.0
+compiled using version 3.4.0.0 of the Cabal library
+```
+or other version.
+
+Full `ghcup` functionality via cli:
+```
+# list available ghc/cabal versions
+ghcup list
+
+# install the recommended GHC version
+ghcup install ghc
+
+# install a specific GHC version
+ghcup install ghc 8.2.2
+
+# set the currently "active" GHC version
+ghcup set ghc 8.4.4
+
+# install cabal-install
+ghcup install cabal
+
+# update ghcup itself
+ghcup upgrade
+```
+## Windows
+1. [Configure Chocolatey](https://chocolatey.org/install) on your machine.
+2. At an elevated command prompt, run `choco install haskell-dev`, followed by `refreshenv`.
