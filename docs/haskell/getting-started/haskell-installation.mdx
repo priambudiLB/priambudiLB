@@ -4,16 +4,20 @@ sidebar_position: 1
 # Haskell Installation
 
 export const MyOS = ({children, color}) => {
-  let Name = "Not known";
-  if (navigator.appVersion.indexOf("Win") != -1) Name = 
-    "Windows";
-  if (navigator.appVersion.indexOf("Mac") != -1) Name = 
-    "OS X";
-  if (navigator.appVersion.indexOf("X11") != -1) Name = 
-    "UNIX";
-  if (navigator.appVersion.indexOf("Linux") != -1) Name = 
-    "Linux";
-  return <span>You appear to be running <strong style={{color: 'var(--ifm-link-color)'}}>{Name}</strong>.</span>
+  const [osName, setOsName] = React.useState("Not known");
+  React.useEffect(() => {
+    let Name = "Not known";
+    if (navigator.appVersion.indexOf("Win") != -1) Name = 
+      "Windows";
+    if (navigator.appVersion.indexOf("Mac") != -1) Name = 
+      "OS X";
+    if (navigator.appVersion.indexOf("X11") != -1) Name = 
+      "UNIX";
+    if (navigator.appVersion.indexOf("Linux") != -1) Name = 
+      "Linux";
+    setOsName(Name)
+  }, []);
+  return <span>You appear to be running <strong style={{color: 'var(--ifm-link-color)'}}>{osName}</strong>.</span>
 };
 
 Its not as easy as installing **[node](https://nodejs.dev/)**, but the docs made it clear and straightforward.
