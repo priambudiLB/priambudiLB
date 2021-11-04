@@ -51,60 +51,52 @@ module.exports = {
           position: 'left'
         },
         {
-          href: 'https://github.com/priambudiLB',
+          href: 'https://github.com/priambudiLB/fyi',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
         },
-        // {
-        //   type: 'localeDropdown',
-        //   position: 'right',
-        // },
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
       ],
     },
     footer: {
       style: 'dark',
-      // links: [
-      //   {
-      //     title: 'Docs',
-      //     items: [
-      //       {
-      //         label: 'Tutorial',
-      //         to: '/docs/intro',
-      //       },
-      //     ],
-      //   },
-      //   // {
-      //   //   title: 'Community',
-      //   //   items: [
-      //   //     {
-      //   //       label: 'Stack Overflow',
-      //   //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-      //   //     },
-      //   //     {
-      //   //       label: 'Discord',
-      //   //       href: 'https://discordapp.com/invite/docusaurus',
-      //   //     },
-      //   //     {
-      //   //       label: 'Twitter',
-      //   //       href: 'https://twitter.com/docusaurus',
-      //   //     },
-      //   //   ],
-      //   // },
-      //   {
-      //     title: 'More',
-      //     items: [
-      //       {
-      //         label: 'Read',
-      //         to: '/read',
-      //       },
-      //       // {
-      //       //   label: 'GitHub',
-      //       //   href: 'https://github.com/facebook/docusaurus',
-      //       // },
-      //     ],
-      //   },
-      // ],
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Tutorials',
+              to: '/docs/intro',
+            },
+          ],
+        },
+        {
+          title: 'Connect with me',
+          items: [
+            {
+              label: 'Linkedin',
+              href: 'https://www.linkedin.com/in/priambudi-bagaskara/',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Read',
+              to: '/read',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/priambudiLB',
+            },
+          ],
+        },
+      ],
       copyright: `Copyright © ${new Date().getFullYear()} Priambudi Lintang Bagaskara. Built with Docusaurus.`,
     },
     prism: {

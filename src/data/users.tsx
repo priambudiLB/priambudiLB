@@ -11,24 +11,24 @@ import {
   SiJavascript,
   SiTypescript,
   SiReact,
-  SiNextDotJs,
+  SiNextdotjs,
   SiSvelte,
   SiPython,
   SiDjango,
   SiGo,
   SiDocker,
-  SiNodeDotJs,
+  SiNodedotjs,
   SiCelery,
   SiRedis,
   SiAmazonaws,
   SiFlutter,
   SiGraphql,
-  SiMaterialUi,
+  SiMaterialui,
   SiLine,
   SiPokemon,
   SiPostgresql,
   SiMysql,
-  SiRollupDotJs,
+  SiRollupdotjs,
   SiWebpack
 } from 'react-icons/si';
 
@@ -154,7 +154,7 @@ export const Tags: Record<TagType, Tag> = {
   nodejs: {
     label: 'Node.JS',
     description: 'Created using Node.JS',
-    icon: <SiNodeDotJs />,
+    icon: <SiNodedotjs />,
   },
   go: {
     label: 'Go',
@@ -171,15 +171,15 @@ export const Tags: Record<TagType, Tag> = {
     description: 'Created using Redis',
     icon: <SiRedis />,
   },
-  // amazonaws: {
-  //   label: 'Amazon AWS',
-  //   description: 'Deployed using AWS',
-  //   icon: <SiAmazonaws />,
-  // },
+  amazonaws: {
+    label: 'Amazon AWS',
+    description: 'Deployed using AWS',
+    icon: <SiAmazonaws />,
+  },
   next: {
     label: 'Next.JS',
     description: 'Created using Next.JS',
-    icon: <SiNextDotJs />,
+    icon: <SiNextdotjs />,
   },
   flutter: {
     label: 'Flutter',
@@ -194,7 +194,7 @@ export const Tags: Record<TagType, Tag> = {
   materialui: {
     label: 'MaterialUI',
     description: 'Created using MaterialUI',
-    icon: <SiMaterialUi />,
+    icon: <SiMaterialui />,
   },
   line: {
     label: 'Line',
@@ -219,7 +219,7 @@ export const Tags: Record<TagType, Tag> = {
   rollupjs: {
     label: 'Rollup.JS',
     description: 'Bundled with Rollup.JS',
-    icon: <SiRollupDotJs />,
+    icon: <SiRollupdotjs />,
   },
   webpack: {
     label: 'Webpack',
