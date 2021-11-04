@@ -1,33 +1,21 @@
-# Website
+<p align="center"><a href="https://priambudi.fyi"><img width="80px" src="static/img/logo.svg" /></a></p>
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+<h1>A FrontEnd enthusiast. Love to learn, share, and create.</h1>
 
-## Installation
+**About me**
 
-```console
-yarn install
-```
+- 💼 [Fulltime] Software Engineer-Web Platform at [Tokopedia](https://www.tokopedia.com/)
 
-## Local Development
+- 💼 [Part-time] Fullstack Web Faciliitator at [Binar Academy](https://www.binaracademy.com/)
 
-```console
-yarn start
-```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-## Build
+**Languages and Tools:**  
 
-```console
-yarn build
-```
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"></code>
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"></code>
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"></code>    
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-```console
-GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+| <img align="center" src="https://github-readme-stats.vercel.app/api?username=priambudiLB&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Bagas' github stats" /> | <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=priambudiLB&layout=compact&theme=buefy&hide_border=true" /> |
+| ------------- | ------------- |
