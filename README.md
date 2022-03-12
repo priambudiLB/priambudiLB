@@ -1,12 +1,12 @@
 <p align="center"><a href="https://priambudi.fyi"><img width="80px" src="static/img/logo.svg" /></a></p>
 
-<h1>A FrontEnd enthusiast. Love to learn, share, and create.</h1>
+<h1>FrontEnd enthusiast. Love to learn, share, and create.</h1>
 
 **About me**
 
 - 💼 [Fulltime] Software Engineer-Web Platform at [Tokopedia](https://www.tokopedia.com/)
 
-- 💼 [Part-time] Fullstack Web Faciliitator at [Dibimbing](https://dibimbing.id/)
+- 💼 [Part-time] Fullstack Web Facilitator at [Dibimbing](https://dibimbing.id/)
 
 
 
