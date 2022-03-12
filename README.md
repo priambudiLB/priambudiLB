@@ -6,7 +6,7 @@
 
 - 💼 [Fulltime] Software Engineer-Web Platform at [Tokopedia](https://www.tokopedia.com/)
 
-- 💼 [Part-time] Fullstack Web Faciliitator at [Binar Academy](https://www.binaracademy.com/)
+- 💼 [Part-time] Fullstack Web Faciliitator at [Dibimbing](https://dibimbing.id/)
 
 
 
