@@ -4,9 +4,11 @@
 
 **About me**
 
-- 💼 [Fulltime] Software Engineer-Web Platform at [Tokopedia](https://www.tokopedia.com/)
+- 📚 [Fulltime] Master's Degree Student at [National University of Singapore](https://nus.edu.sg/)
 
 - 💼 [Part-time] Fullstack Web Facilitator at [Dibimbing](https://dibimbing.id/)
+
+- 💼 ex Software Engineer-Web Platform at [Tokopedia](https://www.tokopedia.com/)
 
 
 
