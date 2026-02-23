@@ -4,3 +4,24 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
+.page {
+  margin: 2rem 0 3rem;
+}
+
+.lead {
+  max-width: 720px;
+}
+
+.list {
+  margin-top: 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  margin-top: 1.5rem;
+}

@@ -1,25 +1,43 @@
 /* stylelint-disable docusaurus/copyright-header */
 
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.main {
+  padding: 3rem 0 4rem;
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.hero {
+  max-width: 760px;
 }
 
-.buttons {
+.kicker {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+}
+
+.title {
+  margin: 0.75rem 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.1;
+}
+
+.lead {
+  margin: 0;
+  max-width: 620px;
+  color: var(--ifm-color-content-secondary);
+  font-size: 1.05rem;
+}
+
+.actions {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.actionButton {
+  min-width: 110px;
   justify-content: center;
 }

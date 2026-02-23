@@ -20,8 +20,8 @@ import {SortedUsers, Tags, TagList, User, TagType} from '../../data/users';
 
 type Operator = 'OR' | 'AND';
 
-const TITLE = 'My Project Showcase';
-const DESCRIPTION = 'List of applications bagas has built.';
+const TITLE = 'Project Showcase';
+const DESCRIPTION = 'Selected projects by Priambudi Lintang Bagaskara.';
 
 function filterUsers(
   users: User[],
@@ -57,8 +57,13 @@ function useFilteredUsers(
 
 const TagQueryStringKey = 'tags';
 
-function readSearchTags(search: string) {
-  return new URLSearchParams(search).getAll(TagQueryStringKey) as TagType[];
+function isTagType(value: string): value is TagType {
+  return TagList.includes(value as TagType);
+}
+
+function readSearchTags(search: string): TagType[] {
+  const urlTags = new URLSearchParams(search).getAll(TagQueryStringKey);
+  return Array.from(new Set(urlTags.filter(isTagType)));
 }
 
 function replaceSearchTags(search: string, newTags: TagType[]) {
@@ -80,7 +85,7 @@ function useSelectedTags() {
   useEffect(() => {
     const tags = readSearchTags(location.search);
     setSelectedTags(tags);
-  }, [location, setSelectedTags]);
+  }, [location.search]);
 
   // Update the QS value
   const toggleTag = useCallback(
@@ -150,7 +155,12 @@ function ShowcaseFilters({
             name="operator"
             label="Filter: "
             value={operator}
-            onChange={(e) => setOperator(e.target.value as Operator)}>
+            onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+              const selectedOperator = e.target.value;
+              if (selectedOperator === 'OR' || selectedOperator === 'AND') {
+                setOperator(selectedOperator);
+              }
+            }}>
             <option value="OR">OR</option>
             <option value="AND">AND</option>
           </ShowcaseSelect>

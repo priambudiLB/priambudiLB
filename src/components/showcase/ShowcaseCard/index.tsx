@@ -5,19 +5,19 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { memo } from "react";
+import React, {memo} from 'react';
 
-import styles from "./styles.module.css";
-import clsx from "clsx";
-import Image from "@theme/IdealImage";
-import Tippy from "@tippyjs/react";
-import "tippy.js/dist/tippy.css";
-import "tippy.js/animations/scale-subtle.css";
+import styles from './styles.module.css';
+import clsx from 'clsx';
+import Image from '@theme/IdealImage';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/animations/scale-subtle.css';
 
-import { Tags, TagList, TagType, User, Tag } from "../../../data/users";
-import { sortBy } from "../../../utils/jsUtils";
+import {Tags, TagList, TagType, User, Tag} from '../../../data/users';
+import {sortBy} from '../../../utils/jsUtils';
 
-function TagIcon({ label, description, icon }: Tag) {
+function TagIcon({label, description, icon}: Tag) {
   return (
     <Tippy content={label}>
       <span className={styles.tagIcon} title={`${label}: ${description}`}>
@@ -27,7 +27,7 @@ function TagIcon({ label, description, icon }: Tag) {
   );
 }
 
-function ShowcaseCardTagIcons({ tags }: { tags: TagType[] }) {
+function ShowcaseCardTagIcons({tags}: {tags: TagType[]}) {
   const tagObjects = tags
     .map((tag) => ({ tag, ...Tags[tag] }))
     .filter((tagObject) => !!tagObject.icon);
@@ -39,18 +39,18 @@ function ShowcaseCardTagIcons({ tags }: { tags: TagType[] }) {
 
   return (
     <>
-      {tagObjectsSorted.map((tagObject, index) => (
-        <TagIcon key={index} {...tagObject} />
+      {tagObjectsSorted.map((tagObject) => (
+        <TagIcon key={tagObject.tag} {...tagObject} />
       ))}
     </>
   );
 }
 
-const ShowcaseCard = memo(function ({ user }: { user: User }) {
+const ShowcaseCard = memo(function ({user}: {user: User}) {
   return (
-    <div key={user.title} className="col col--4 margin-bottom--lg">
-      <div className={clsx("card", styles.showcaseCard)}>
-        <div className={clsx("card__image", styles.showcaseCardImage)}>
+    <div className="col col--4 margin-bottom--lg">
+      <div className={clsx('card', styles.showcaseCard)}>
+        <div className={clsx('card__image', styles.showcaseCardImage)}>
           <Image img={user.preview} alt={user.title} quality={60} />
         </div>
         <div className="card__body">

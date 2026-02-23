@@ -2,34 +2,24 @@
 sidebar_position: 1
 ---
 
-# Docusaurus
+# Welcome
 
-Docusaurus Tutorial Intro. Let's discover **Docusaurus in less than 5 minutes**.
+This site is the personal knowledge base and portfolio of Priambudi Lintang
+Bagaskara.
 
-## Getting Started
+## What you can find here
 
-Get started by **creating a new site**.
+- Engineering notes and tutorials under the docs section.
+- Short posts and experiments in the blog (`/read`).
+- Project showcase with stack-based filters (`/showcase`).
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Local development
 
-## Generate a new site
+Install dependencies and run the site:
 
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npx @docusaurus/init@latest init my-website classic
+```bash
+npm install
+npm run start
 ```
 
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+The dev server runs at `http://localhost:3000`.

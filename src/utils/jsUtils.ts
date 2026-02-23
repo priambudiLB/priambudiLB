@@ -3,11 +3,13 @@ export function difference<T>(...arrays: T[][]) {
   return arrays.reduce((a, b) => a.filter((c) => !b.includes(c)));
 }
 
+type SortableValue = string | number;
+
 // Inspired by https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_sortby-and-_orderby
-export function sortBy<T>(array: T[], getter: (item: T) => unknown) {
-  function compareBy(getter: (item: T) => unknown) {
+export function sortBy<T>(array: T[], getter: (item: T) => SortableValue) {
+  function compareBy(getterFn: (item: T) => SortableValue) {
     return (a: T, b: T) =>
-      getter(a) > getter(b) ? 1 : getter(b) > getter(a) ? -1 : 0;
+      getterFn(a) > getterFn(b) ? 1 : getterFn(b) > getterFn(a) ? -1 : 0;
   }
 
   const sortedArray = [...array];

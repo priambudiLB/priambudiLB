@@ -1,11 +1,10 @@
 {
   "extends": "@tsconfig/docusaurus/tsconfig.json",
-  "include": ["src/", "tests/**/*"],
+  "include": ["src/", "tests/**/*", "typings.d.ts"],
   "exclude": ["node_modules", ".vscode"],
   "compilerOptions": {
     "jsx": "react",
     "target": "ES2015",
-    "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,

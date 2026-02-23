@@ -20,10 +20,10 @@ import {
   SiNodedotjs,
   SiCelery,
   SiRedis,
-  SiAmazonaws,
+  SiAmazonwebservices,
   SiFlutter,
   SiGraphql,
-  SiMaterialui,
+  SiMui,
   SiLine,
   SiPokemon,
   SiPostgresql,
@@ -68,7 +68,7 @@ import {
 export type Tag = {
   label: string;
   description: string;
-  icon: JSX.Element;
+  icon: React.ReactNode;
 };
 
 export type TagType =
@@ -174,7 +174,7 @@ export const Tags: Record<TagType, Tag> = {
   amazonaws: {
     label: 'Amazon AWS',
     description: 'Deployed using AWS',
-    icon: <SiAmazonaws />,
+    icon: <SiAmazonwebservices />,
   },
   next: {
     label: 'Next.JS',
@@ -194,7 +194,7 @@ export const Tags: Record<TagType, Tag> = {
   materialui: {
     label: 'MaterialUI',
     description: 'Created using MaterialUI',
-    icon: <SiMaterialui />,
+    icon: <SiMui />,
   },
   line: {
     label: 'Line',
@@ -355,10 +355,15 @@ function ensureUserValid(user: User) {
   }
 
   function checkPreview() {
+    const previewUrl =
+      typeof user.preview === 'string' ? user.preview : undefined;
+
     if (
       !user.preview ||
-      (user.preview instanceof String &&
-        (user.preview.startsWith('http') || user.preview.startsWith('//')))
+      (previewUrl &&
+        (previewUrl.startsWith('http://') ||
+          previewUrl.startsWith('https://') ||
+          previewUrl.startsWith('//')))
     ) {
       throw new Error(
         `Site has bad image preview=[${user.preview}].\nThe image should be hosted on Docusaurus site, and not use remote HTTP or HTTPS URLs`,
@@ -412,8 +417,9 @@ function ensureUserValid(user: User) {
     checkTags();
     checkOpenSource();
   } catch (e) {
+    const message = e instanceof Error ? e.message : String(e);
     throw new Error(
-      `Showcase site with title=${user.title} contains errors:\n${e.message}`,
+      `Showcase site with title=${user.title} contains errors:\n${message}`,
     );
   }
 }

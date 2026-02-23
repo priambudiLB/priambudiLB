@@ -14,7 +14,8 @@ interface Props extends ComponentProps<'select'> {
 }
 
 function ShowcaseSelect({label, ...props}: Props) {
-  const id = `showcase_select_id_${props.name};`;
+  const name = typeof props.name === 'string' ? props.name : 'field';
+  const id = `showcase_select_id_${name}`;
   return (
     <div className={styles.selectContainer}>
       <label htmlFor={id}>{label}</label>

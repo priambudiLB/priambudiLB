@@ -15,7 +15,8 @@ interface Props extends ComponentProps<'input'> {
 }
 
 function ShowcaseCheckbox({title, className, label, ...props}: Props) {
-  const id = `showcase_checkbox_id_${props.name};`;
+  const name = typeof props.name === 'string' ? props.name : 'field';
+  const id = `showcase_checkbox_id_${name}`;
   return (
     <div className={clsx(className, styles.checkboxContainer)} title={title}>
       <input type="checkbox" id={id} {...props} />

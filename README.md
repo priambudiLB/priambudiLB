@@ -21,3 +21,17 @@
 
 | <img align="center" src="https://github-readme-stats.vercel.app/api?username=priambudiLB&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Bagas' github stats" /> | <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=priambudiLB&layout=compact&theme=buefy&hide_border=true" /> |
 | ------------- | ------------- |
+
+## Develop this repo
+
+```bash
+npm install
+npm run start
+```
+
+## Maintenance scripts
+
+- `npm run lint`: run ESLint on source files.
+- `npm run typecheck`: run TypeScript checks.
+- `npm run test`: run Jest tests once.
+- `npm run check`: run lint + typecheck + test in sequence.

@@ -1,0 +1,26 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Haskell": {
+    "message": "Haskell",
+    "description": "The label for category 'Haskell' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for category 'Getting Started' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Javascript": {
+    "message": "Javascript",
+    "description": "The label for category 'Javascript' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Next.JS": {
+    "message": "Next.JS",
+    "description": "The label for category 'Next.JS' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Create Backend Server": {
+    "message": "Create Backend Server",
+    "description": "The label for category 'Create Backend Server' in sidebar 'tutorialSidebar'"
+  }
+}

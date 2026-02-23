@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": ".fyi()",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "priambudi.fyi",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label..create()": {
+    "message": ".create()",
+    "description": "Navbar item with label .create()"
+  },
+  "item.label..read()": {
+    "message": ".read()",
+    "description": "Navbar item with label .read()"
+  },
+  "item.label..showcase()": {
+    "message": ".showcase()",
+    "description": "Navbar item with label .showcase()"
+  },
+  "item.label..wmmt()": {
+    "message": ".wmmt()",
+    "description": "Navbar item with label .wmmt()"
+  },
+  "item.label..initial(D)": {
+    "message": ".initial(D)",
+    "description": "Navbar item with label .initial(D)"
+  }
+}

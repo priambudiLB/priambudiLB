@@ -4,3 +4,38 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
+.page {
+  margin: 2rem 0 3rem;
+}
+
+.lead {
+  max-width: 720px;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1.5rem;
+}
+
+.card {
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 12px;
+  padding: 1rem;
+  background: var(--ifm-card-background-color);
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin-bottom: 0;
+}
+
+.footer {
+  margin-top: 1.5rem;
+}

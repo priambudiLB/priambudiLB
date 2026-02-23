@@ -1,20 +1,26 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const {themes: prismThemes} = require('prism-react-renderer');
+
+const lightCodeTheme = prismThemes.github;
+const darkCodeTheme = prismThemes.dracula;
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'priambudi.fyi',
-  tagline: 'Dinosaurs are cool. But I\'m even cooler 😎.',
+  tagline: 'Software engineer focused on web platforms, docs, and learning in public.',
   url: 'https://priambudi.fyi',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   favicon: 'img/favicon.ico',
   organizationName: 'priambudiLB', // Usually your GitHub org/user name.
   projectName: 'fyi', // Usually your repo name.
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'id', 'jp'],
+    locales: ['en', 'id', 'ja'],
   },
   themeConfig: {
     defaultMode: 'dark',
@@ -51,12 +57,12 @@ module.exports = {
           position: 'left'
         },
         {
-          to: '/wmmt',
+          href: 'https://horus.priambudi.fyi/wmmt',
           label: '.wmmt()',
           position: 'left'
         },
         {
-          to: '/initiald',
+          href: 'https://horus.priambudi.fyi/initiald',
           label: '.initial(D)',
           position: 'left'
         },
@@ -113,9 +119,6 @@ module.exports = {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
     },
-    gtag: {
-      trackingID: "G-EWZ5G4808S",
-    },
   },
   plugins: [
     '@docusaurus/plugin-ideal-image'
@@ -150,6 +153,9 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: {
+          trackingID: 'G-EWZ5G4808S',
         },
         sitemap: {
           changefreq: 'weekly',
